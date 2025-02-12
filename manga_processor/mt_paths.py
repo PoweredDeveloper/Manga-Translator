@@ -27,12 +27,56 @@ class MT_PathGen:
         return Path(self._output_path + '_mask.png')
     
     @property
+    def masked(self) -> Path:
+        return Path(self._output_path + '_masked.png')
+    
+    @property
+    def mask_fitments(self) -> Path:
+        return Path(self._output_path + '_mask_fitments.png')
+    
+    @property
+    def combined_mask(self) -> Path:
+        return Path(self._output_path + '_combined_mask.png')
+    
+    @property
+    def std_deviations(self) -> Path:
+        return Path(self._output_path + '_std_deviations.png')
+    
+    @property
     def raw_boxes(self) -> Path:
         return Path(self._output_path + '_raw_boxes.png')
     
     @property
-    def json(self) -> Path:
-        return Path(self._output_path + '.json')
+    def boxes(self) -> Path:
+        return Path(self._output_path + '_boxes.png')
+    
+    @property
+    def box_mask(self) -> Path:
+        return Path(self._output_path + '_box_mask.png')
+    
+    @property
+    def cut_mask(self) -> Path:
+        return Path(self._output_path + '_cut_mask.png')
+    
+    @property
+    def final_boxes(self) -> Path:
+        return Path(self._output_path + '_final_boxes.png')
+    
+    @property
+    def clean_json(self) -> Path:
+        return Path(self._output_path + '#clean.json')
+    
+    @property
+    def raw_json(self) -> Path:
+        return Path(self._output_path + '#raw.json')
+    
+    @property
+    def mask_data_json(self) -> Path:
+        return Path(self._output_path + '#mask_data.json')
+    
+    @property
+    def text(self) -> Path:
+        return Path(self._output_path + '_text.png') 
 
     @property
     def clean(self) -> Path:

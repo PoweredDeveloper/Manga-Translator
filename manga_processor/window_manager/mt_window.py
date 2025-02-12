@@ -69,4 +69,4 @@ class MT_PySide_Window(QMainWindow):
 
     def process_image(self) -> None:
         if self.image_paths == '': return
-        self.image_processor.clean(self.image_paths, Path(''))
+        self.image_processor.clean(self.image_paths, Path(''), True)
