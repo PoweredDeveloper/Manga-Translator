@@ -1,7 +1,7 @@
-# Manga Translator
+# 🎇 Manga Translator
 Manga Translator - an app that allows you to translate, clean, read with OCR manga pages easily! You can edit manga pages in programm directly!
 
-# Installation
+# 🛠️ Installation
 The installation is pretty simple! Prefered _python_ version: 3.12. You can download it from python [webpage](https://python.org/downloads)
 ```bash
 git clone https://github.com/PoweredDeveloper/Manga-Translator
@@ -21,7 +21,7 @@ And now you are ready to go! Run `main.py` and that's it!
 python ./main.py
 ```
 
-# Example of app output
+# 🖼️ Example of app output
 ![Manga example image](imgs/1.png)
 <br />
 <sup>山田くんとLv999の恋をする ©Mashiro</sup>
@@ -42,6 +42,6 @@ python ./main.py
 <br />
 <sup>山田くんとLv999の恋をする ©Mashiro</sup>
 
-# Acknowledgements
-[Comic Text Detector](https://github.com/dmMaze/comic-text-detector)
+# 📚 Acknowledgements
+[Comic Text Detector](https://github.com/dmMaze/comic-text-detector)<br />
 [manga-ocr](https://github.com/kha-white/manga-ocr)
