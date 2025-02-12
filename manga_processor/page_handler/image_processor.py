@@ -237,7 +237,7 @@ class MT_ImageProcessor:
 
         font_path = FONT_ROBOTO_PATH
         logger.debug(f"Loading included font from {font_path}")
-        font_size = int(base_image.size[0] / 50) + 5
+        font_size = int(base_image.size[0] / 100) + 5
         font = ImageFont.truetype(font_path, font_size)
 
         for fitment in mask_fitments:
