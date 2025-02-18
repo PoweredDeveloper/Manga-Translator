@@ -4,6 +4,7 @@ import numpy
 import shutil
 
 from ..mt_logger import logger
+from ..mt_config import PROJECTS_PATH
 from pathlib import Path
 
 NP_BOOL_TYPES = (numpy.bool_, numpy.bool8)
@@ -46,3 +47,22 @@ def empty_directoty(directory_path: Path) -> None:
                 shutil.rmtree(file_path)
         except Exception as exception:
             logger.exception(f'Failed to delete {file_path}. Reason: {exception}')
+
+def reset_cache(cache_path: Path) -> None:
+    empty_directoty(cache_path)
+
+def verify_project_folder() -> None:
+    if not os.path.exists(str(PROJECTS_PATH)):
+        os.mkdir(os.path.join(os.environ['USERPROFILE'], 'Documents', 'Manga Translator Projects'))
+
+def suggest_project_name(projects_path: Path) -> str:
+    dirs = [str(path.relative_to(str(projects_path))) for path in projects_path.iterdir()]
+    dirs = list(filter(lambda x: x.count('project') == 1, dirs))
+    if len(dirs) > 0:
+        dirs.sort()
+        digit = int(''.join(list(filter(lambda x: x in [*'0123456789'], [*dirs[len(dirs) - 1]])))) + 1
+    else:
+        digit = 0
+
+    return 'project' + str(digit)
+    
